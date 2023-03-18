@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+</head>
+<body>
+
+<div>
+    <h1>My shop</h1>
+</div>
+<div>
+    <p>Your cart is empty</p>
+</div>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
