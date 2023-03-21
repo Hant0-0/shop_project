@@ -35,6 +35,9 @@ class Product(models.Model):
         ordering = ['name', ]
         index_together = ['id', 'slug']
 
+    def get_absolute_url(self):
+        return reverse('product_detail', args=[str(self.id), str(self.slug)])
+
     def __str__(self):
         return self.name
 

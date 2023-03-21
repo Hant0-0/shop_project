@@ -8,7 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.product_list, name='product_list'),
     path('<slug:category_slug>/', views.product_list, name='product_list'),
-    path('<int:id>/<slug:product_slug>/', views.product_detail, name='product_detail')
+    path('<int:pr_id>/<slug:product_slug>/', views.product_detail, name='product_detail')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

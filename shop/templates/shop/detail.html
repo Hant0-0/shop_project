@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'shop/base.html' %}
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+</head>
+<body>
+
+{% block content %}
+
+<div>
+    <img src="{% if x.image %}{{ x.image.url }}{% else %}{% static 'image/no_image.jpg' %}{% endif %}">
+    <h1>{{ products.name }}</h1>
+    <h2>{{ products.price }}</h2>
+    <p>{{ products.description }}</p>
+</div>
+
+{% endblock %}
+
+</body>
+</html>

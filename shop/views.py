@@ -11,9 +11,10 @@ def product_list(request, category_slug=None):
         product = Product.objects.filter(category=category)
     return render(request, 'shop/list.html', {'categories': categories, 'product': product, 'category': category})
 
-def product_detail(request):
-    categories = Category.objects.all()
-    return render(request, 'shop/detail.html', {'categories': categories})
+def product_detail(request, pr_id, product_slug):
+    products = get_object_or_404(Product, id=pr_id, slug=product_slug)
+
+    return render(request, 'shop/detail.html', {'products': products})
 
 
 

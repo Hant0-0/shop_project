@@ -28,7 +28,7 @@
         <h1>Products</h1>
         {% for x in product %}
             <img src="{% if x.image %}{{ x.image.url }}{% else %}{% static 'image/no_image.jpg' %}{% endif %}" class="image">
-            <h2>{{ x.name }}</h2>
+            <h2><a href="{{ x.get_absolute_url }}">{{ x.name }}</a></h2>
             <p>{{ x.price }}</p>
         {% endfor %}
 
