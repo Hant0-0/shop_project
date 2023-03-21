@@ -10,10 +10,35 @@
 
 {% block content %}
 
+
+<div class="shop">
+    <div class="list">
+        <ul>
+            <li>All</li>
+            {% for x in categories %}
+                <li>
+                    <a href="{{ x.get_absolute_url }}">{{ x.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+    <div class="product">
+        <h1>Products</h1>
+        {% for x in product %}
+            <img src="{% if x.image %}{{ x.image.url }}{% else %}{% static 'image/no_image.jpg' %}{% endif %}" class="image">
+            <h2>{{ x.name }}</h2>
+            <p>{{ x.price }}</p>
+        {% endfor %}
+
+    </div>
+
+</div>
+
 {% endblock %}
 
-{{ category }}
-{{ product }}
+
 
 </body>
 </html>

@@ -1,0 +1,20 @@
+.cart{
+    background-color: #d8d8d8;
+    width: 100%;
+    padding-left: 85%;
+    height: 44px;
+    font-size: 18px;
+}
+
+.image{
+    width: 300px;
+}
+
+.shop{
+    display: flex;
+}
+
+.product{
+    padding-left: 40px;
+
+}
