@@ -14,11 +14,17 @@
 {% block content %}
 
 <div>
-    <img src="{% if x.image %}{{ x.image.url }}{% else %}{% static 'image/no_image.jpg' %}{% endif %}">
+    <img src="{% if products.image %}{{ products.image.url }}{% else %}{% static 'image/no_image.jpg' %}{% endif %}" class="image">
     <h1>{{ products.name }}</h1>
     <h2>{{ products.price }}</h2>
     <p>{{ products.description }}</p>
 </div>
+
+<form action="{% url 'cart_add' products.id %}" method="POST">
+    {% csrf_token %}
+    {{ cart_product_form }}
+    <button type="submit">Add to cart</button>
+</form>
 
 {% endblock %}
 
