@@ -13,18 +13,23 @@
 
 {% block content %}
 
-<div>
-    <img src="{% if products.image %}{{ products.image.url }}{% else %}{% static 'image/no_image.jpg' %}{% endif %}" class="image">
-    <h1>{{ products.name }}</h1>
-    <h2>{{ products.price }}</h2>
-    <p>{{ products.description }}</p>
+<div class="product_wrapper">
+    <div>
+        <img src="{% if products.image %}{{ products.image.url }}{% else %}{% static 'image/no_image.jpg' %}{% endif %}" class="image_detail">
+    </div>
+    <div class="detail">
+        <h1>{{ products.name }}</h1>
+        <h2>₴{{ products.price }}</h2>
+        <p>{{ products.description }}</p>
+        <form action="{% url 'cart_add' products.id %}" method="POST">
+            {% csrf_token %}
+            {{ cart_product_form }}
+            <button type="submit" class="add_cart">Add to cart</button>
+        </form>
+    </div>
 </div>
 
-<form action="{% url 'cart_add' products.id %}" method="POST">
-    {% csrf_token %}
-    {{ cart_product_form }}
-    <button type="submit">Add to cart</button>
-</form>
+
 
 {% endblock %}
 

@@ -26,7 +26,7 @@
         {% for item in cart %}
             {% with product=item.product %}
                 <tr class="cart_products">
-                    <td><img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'image/no_image.jpg' %}{% endif %}" class="image"></td>
+                    <td><img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'image/no_image.jpg' %}{% endif %}" class="image_cart"></td>
                     <td>{{ product.name }}</td>
                     <td>{{ item.quantity }}</td>
                     <td><a href="{% url 'cart_remove' product.id %}">Remove</a></td>
@@ -35,7 +35,7 @@
                 </tr>
             {% endwith %}
         {% endfor %}
-        <tr>
+        <tr id="tr">
             <td>Total</td>
             <td></td>
             <td></td>
