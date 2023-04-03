@@ -59,6 +59,12 @@ li {
 
 .product_wrapper {
     display: flex;
+    gap: 60px;
+
+}
+
+.category_wrapper {
+    display: flex;
     flex-wrap: wrap;
     gap: 60px;
 }

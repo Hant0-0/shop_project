@@ -50,7 +50,7 @@
         {% else %}
             <h1> Products </h1>
         {% endif %}
-            <div  class="product_wrapper">
+            <div  class="category_wrapper">
                 {% for x in product %}
                     <div>
                         <img src="{% if x.image %}{{ x.image.url }}{% else %}{% static 'image/no_image.jpg' %}{% endif %}" class="image_detail">
