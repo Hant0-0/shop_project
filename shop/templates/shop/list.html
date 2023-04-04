@@ -55,7 +55,7 @@
                     <div>
                         <img src="{% if x.image %}{{ x.image.url }}{% else %}{% static 'image/no_image.jpg' %}{% endif %}" class="image_detail">
                         <h2><a href="{{ x.get_absolute_url }}">{{ x.name }}</a></h2>
-                        <p>{{ x.price }}</p>
+                        <p>₴{{ x.price }}</p>
                     </div>
                 {% endfor %}
             </div>
