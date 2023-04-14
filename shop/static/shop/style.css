@@ -148,10 +148,11 @@ td:nth-child(2){
     text-align: left;
 }
 
-.button {
+.button_checkout {
     display: inline-block;
     background: #2196f3;
     color: #fff;
+    color: white;
     padding: 12px;
     border-radius: 3px;
     text-decoration: none;
@@ -159,16 +160,112 @@ td:nth-child(2){
     font-size: 18px;
     line-height: 1;
     font-weight: 100;
-    margin-left: 1140px;
 }
 
-.a {
-    background-color: #2196f3;
-    margin-right: 30px;
-    width: 260px;
-    height: 30px;
+.button_continue {
+    display: inline-block;
+    background: #dfdfdf;
+    padding: 12px;
     border-radius: 3px;
+    text-decoration: none;
+    font-family: Tahoma;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 100;
+    margin-left: 1050px;
+}
 
+.button_order {
+    margin-top: 10px;
+    display: inline-block;
+    background: #2196f3;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+    font-family: Tahoma;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 100;
+    width: 300px;
+}
+
+.button_cart {
+    margin-left: 1050px;
 }
 
 
+
+/* ------------ ORDER ---------------*/
+
+.form{
+    margin-left: 30px;
+    margin-top: 15px;
+    display: flex;
+
+}
+
+.label {
+    font-size: 23px;
+}
+
+input {
+    width: 300px;
+    height: 28px;
+    background-color: #d8d8d8;
+    border: none;
+    border-radius: 5px;
+}
+
+.order_wrapper {
+    padding-top: 10px;
+}
+
+.check{
+    background-color: #dfdfdf;
+    margin-left: 520px;
+    margin-top: 70px;
+    height: 200px;
+    width: 450px;
+    border-radius: 5px;
+}
+
+.title_order {
+    font-size: 18px;
+    font-family: sans-serif;
+    margin-left: 20px;
+    color: #2196f3;
+}
+
+.total_price {
+    margin-left: 300px;
+}
+
+.stek {
+    display: flex;
+    padding-right: 20px;
+}
+
+.order_price {
+    margin-left: 18px;
+}
+
+.order_quantity {
+    margin-right: 20px;
+}
+
+.order_detail {
+    background-color: #c4c6c8;
+    width: 400px ;
+    height: auto;
+    margin-left: 500px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.order_item {
+    height: 20px;
+}

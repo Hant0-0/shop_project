@@ -3,13 +3,10 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+from order import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('cart/', include('cart.urls')),
-    path('order/', include('order.urls')),
-    path('', include('shop.urls')),
-
+    path('', views.order, name='order')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

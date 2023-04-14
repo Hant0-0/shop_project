@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'shop/base.html' %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+</head>
+<body>
+
+{% block content %}
+
+<h1>Thank you</h1>
+<h1>Your order has been successfully completed. You order number {{ order.id }}</h1>
+
+
+{% endblock %}
+
+</body>
+</html>
