@@ -1,13 +1,17 @@
 from django.shortcuts import render, get_object_or_404
-
 from cart.forms import CartAddProductForms
 from shop.models import Category, Product
-
+from django.db.models import Q
 
 def product_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()
-    product = Product.objects.filter(available=True)
+    if 'q' in request.GET:
+        q = request.GET['q']
+        multi_q = Q(Q(name__icontains=q) | Q(description__icontains=q))
+        product = Product.objects.filter(multi_q, available=True)
+    else:
+        product = Product.objects.filter(available=True)
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
         product = Product.objects.filter(category=category)

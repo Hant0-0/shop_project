@@ -1,5 +1,4 @@
-from django.shortcuts import render, redirect
-
+from django.shortcuts import render
 from cart.cart import Cart
 from order.forms import OrderForm
 from order.models import OrderItem

@@ -269,3 +269,30 @@ input {
 .order_item {
     height: 20px;
 }
+
+/*  SEARCH    */
+
+.search_flex {
+    display: flex;
+    gap: 830px;
+}
+
+.search {
+    margin-top: 30px;
+}
+
+.button_search {
+    display: inline-block;
+    background: #2196f3;
+    color: #fff;
+    color: white;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-family: Tahoma;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 100;
+
+}
